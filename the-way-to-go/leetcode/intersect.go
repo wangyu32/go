@@ -37,5 +37,4 @@ func printArray(array []int) {
 	}
 
 	fmt.Println()
-
 }
