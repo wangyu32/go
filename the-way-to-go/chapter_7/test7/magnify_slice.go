@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 练习7.9
 var s []int
 
 func main() {
