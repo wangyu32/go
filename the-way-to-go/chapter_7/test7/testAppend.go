@@ -23,7 +23,10 @@ func main() {
 	p(d)
 
 	//3. 删除位于索引 i 的元素：`a = append(a[:i], a[i+1:]...)`
-	e := append(a[:3], a[4])
+	fmt.Println("3. 删除位于索引 i 的元素：`a = append(a[:i], a[i+1:]...)`")
+	p(a)
+	e := append(a[:3], a[4:]...)
+	p(a)
 	p(e)
 
 	//4. 切除切片 a 中从索引 i 至 j 位置的元素：`a = append(a[:i], a[j:]...)`
@@ -39,9 +42,11 @@ func main() {
 	fmt.Println(len(g))
 	p(g)
 	//6. 在索引 i 的位置插入元素 x：`a = append(a[:i], append([]T{x}, a[i:]...)...)`
-
+	h := append(a[:3], append([]int{33}, a[3:]...)...  )
+	p(h)
 	//7. 在索引 i 的位置插入长度为 j 的新切片：`a = append(a[:i], append(make([]T, j), a[i:]...)...)`
-
+	i := append(a[:3], append(make([]int, 3), a[3:]...)...)
+	p(i)
 	//8. 在索引 i 的位置插入切片 b 的所有元素：`a = append(a[:i], append(b, a[i:]...)...)`
 
 	//9. 取出位于切片 a 最末尾的元素 x：`x, a = a[len(a)-1], a[:len(a)-1]`
