@@ -48,11 +48,20 @@ func main() {
 	i := append(a[:3], append(make([]int, 3), a[3:]...)...)
 	p(i)
 	//8. 在索引 i 的位置插入切片 b 的所有元素：`a = append(a[:i], append(b, a[i:]...)...)`
-
+	d1:=[]int{11,12,13}
+	j:= append( d[:3], append( d1, d[3:]... )...     )
+	p(j)
+	p(d)
+	p(d1)
 	//9. 取出位于切片 a 最末尾的元素 x：`x, a = a[len(a)-1], a[:len(a)-1]`
+	k:= a[len(a)-1]	
+	fmt.Println(k)
+	l:= a[:(len(a)-1)]	
+	fmt.Println(l)
 
 	//10. 将元素 x 追加到切片 a：`a = append(a, x)`
-
+	l= append(l, 44)
+	p(l)
 }
 
 func p(a []int) {
